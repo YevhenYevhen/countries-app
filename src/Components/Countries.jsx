@@ -1,11 +1,11 @@
 import React, { useContext } from 'react'
-import { isCollapsedContext } from '../App'
+import { CollapseContext } from '../App'
 import '../App.css'
 import { Country } from './Country'
 
 
-export const Countries = ({ countries, toggleIsCollapsed }) => {
-    const isCollapsed = useContext(isCollapsedContext)
+export const Countries = ({ countries }) => {
+    const { isCollapsed, toggleIsCollapsed } = useContext(CollapseContext)
     return (
         <>
             {!isCollapsed && <div>

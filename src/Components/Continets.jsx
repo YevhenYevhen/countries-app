@@ -3,7 +3,7 @@ import queryFetch from '../utilities/queryFetch'
 import { Continent } from './Continent'
 
 
-const Continents = ({toggleIsCollapsed}) => {
+const Continents = () => {
 
     const [continents, setContinents] = useState([])
 
@@ -23,8 +23,7 @@ const Continents = ({toggleIsCollapsed}) => {
     }, [])
 
     return (
-        continents.map(continent => <Continent toggleIsCollapsed={toggleIsCollapsed}
-            key={continent.code} continentCode={continent.code} name={continent.name} />)
+        continents.map(continent => <Continent key={continent.code} continentCode={continent.code} name={continent.name} />)
     )
 
 }
