@@ -27,7 +27,6 @@ import { CollapseContext } from "../App"
         }
     }, [isCollapsed])
      
-   
 
     return (
         <>
